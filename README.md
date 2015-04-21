@@ -14,7 +14,7 @@ Contributing to the library
 
 If you are interested in contributing to this library, please ask for 
 write access to this repository on this FreeCAD forum thread: 
-http://forum.freecadweb.org/viewtopic.php?f=19&t=4205
+http://forum.freecadweb.org/viewtopic.php?f=9&t=10641
 
 Each SVG symbol should be correctly named, and placed into subdirectories 
 by family or type.
