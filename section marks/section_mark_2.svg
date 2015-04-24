@@ -14,7 +14,7 @@
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="section_mark_1.svg">
+   sodipodi:docname="section_mark_2.svg">
   <defs
      id="defs2987" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="11"
      inkscape:cx="21.610368"
-     inkscape:cy="36.344409"
+     inkscape:cy="36.571682"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -77,5 +77,31 @@
        sodipodi:ry="25"
        d="m 35,29 a 25,25 0 1 1 -50,0 25,25 0 1 1 50,0 z"
        transform="matrix(0.80999999,0,0,0.80999999,21.65,8.76)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Walkway Oblique Bold;-inkscape-font-specification:Walkway Oblique Bold"
+       x="21"
+       y="31"
+       id="text3041"
+       sodipodi:linespacing="125%"
+       freecad:editable="A"><tspan
+         sodipodi:role="line"
+         id="tspan3043"
+         x="21"
+         y="31"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Walkway Oblique Bold;-inkscape-font-specification:Walkway Oblique Bold"
+       x="19"
+       y="48"
+       id="text3041-7"
+       sodipodi:linespacing="125%"
+       freecad:editable="FL"><tspan
+         sodipodi:role="line"
+         id="tspan3043-1"
+         x="19"
+         y="48"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">FL</tspan></text>
   </g>
 </svg>

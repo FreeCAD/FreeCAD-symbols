@@ -14,7 +14,7 @@
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="section_mark_3.svg">
+   sodipodi:docname="section_mark_4.svg">
   <defs
      id="defs2987" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.7781746"
-     inkscape:cx="45.084547"
-     inkscape:cy="42.987293"
+     inkscape:zoom="5.5"
+     inkscape:cx="70.844781"
+     inkscape:cy="48.358003"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,5 +70,18 @@
        height="25"
        x="1"
        y="5" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Walkway Oblique Bold;-inkscape-font-specification:Walkway Oblique Bold"
+       x="1"
+       y="53"
+       id="text3041"
+       sodipodi:linespacing="125%"
+       freecad:editable="A"><tspan
+         sodipodi:role="line"
+         id="tspan3043"
+         x="1"
+         y="53"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans">A</tspan></text>
   </g>
 </svg>
