@@ -33,11 +33,11 @@ FreeCAD Symbols Library import macro
 INSTALLATION
 
 This script is made to be used as a FreeCAD macro, and to be placed
-inside your macros folder (default is $HOME/.FreeCAD on mac/linux, 
+inside your macros  (default is $HOME/.FreeCAD on mac/linux, 
 C:/Users/youruser/Application Data/FreeCAD on windows).
 
 You must also edit this file and change the configuration line below 
-to reflect the location of your FreeCAD-symbols folder.
+to reflect the location of your FreeCAD-symbols .
 
 After it is installed on the above location, it will be available
 in the macros menu.
@@ -59,7 +59,7 @@ else:
 	pass
 
 import FreeCAD, FreeCADGui, Part
-from PySide import QtGui, QtCore
+from PySide import QtGui, QtCore, QtSvg
 
 class ExpDockWidget(QtGui.QDockWidget):
     "a library explorer dock widget"
@@ -76,19 +76,35 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.dirmodel.setNameFilters(["*.svg", "*.SVG"])
         self.dirmodel.setNameFilterDisables(0)
 
-        self.folder_view = QtGui.QTreeView();
-        self.folder_view.setModel(self.dirmodel)
-        self.folder_view.doubleClicked[QtCore.QModelIndex].connect(self.clicked)
+        container = QtGui.QWidget()
+        layout = QtGui.QVBoxLayout(container)
+        folder = QtGui.QTreeView();
+        folder.setModel(self.dirmodel)
+        folder.clicked[QtCore.QModelIndex].connect(self.clicked)
+        folder.doubleClicked[QtCore.QModelIndex].connect(self.doubleclicked)
         # Don't show columns for size, file type, and last modified
-        self.folder_view.setHeaderHidden(True)
-        self.folder_view.hideColumn(1)
-        self.folder_view.hideColumn(2)
-        self.folder_view.hideColumn(3)
-        self.folder_view.setRootIndex(self.dirmodel.index(LIBRARYPATH))
-
-        self.setWidget(self.folder_view)
-
+        folder.setHeaderHidden(True)
+        folder.hideColumn(1)
+        folder.hideColumn(2)
+        folder.hideColumn(3)
+        folder.setRootIndex(self.dirmodel.index(LIBRARYPATH))
+        layout.addWidget(folder)
+        self.preview = QtSvg.QSvgWidget()
+        self.preview.setFixedHeight(128)
+        self.preview.setFixedWidth(128)
+        layout.addWidget(self.preview)
+        layout.setAlignment(self.preview, QtCore.Qt.AlignHCenter)
+        self.setWidget(container)
+        
     def clicked(self, index):
+        path = self.dirmodel.filePath(index)
+        if path.lower().endswith(".svg"):
+            self.preview.load(path)
+            self.preview.show()
+            return
+        self.preview.hide()
+
+    def doubleclicked(self, index):
         path = self.dirmodel.filePath(index)
         page = None
         for o in FreeCADGui.Selection.getSelection():
