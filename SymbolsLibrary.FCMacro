@@ -48,15 +48,15 @@ This macro adds a browser window to the FreeCAD interface, from
 which you can browse and install items from the library.
 '''
 
-# CONFIGURATION - EDIT THE FOLLOWING LINE TO MATCH YOUR LIBRARY PATH
-LIBRARYPATH = "/home/yorik/Sources/FreeCAD-symbols"
-# END CONFIGURATION - THAT'S DONE, NO NEED TO EDIT ANYTHING MORE
+param = FreeCAD.ParamGet('User parameter:Plugins/symbols_library')
+s = param.GetString('destination')
 
-s=FreeCAD.ParamGet('User parameter:Plugins/symbollib').GetString('destination')
-if s<>'':
-	LIBRARYPATH = s
+if s:
+    LIBRARYPATH = s
 else:
-	pass
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("SymbolsLibrary", "Location of your existing Symbols library", None, QtGui.QApplication.UnicodeUTF8))
+    param.SetString('destination',folderDialog)
+    LIBRARYPATH = param.GetString('destination')
 
 import FreeCAD, FreeCADGui, Part
 from PySide import QtGui, QtCore, QtSvg
@@ -140,5 +140,4 @@ if QtCore.QDir(LIBRARYPATH).exists():
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
     print "Symbols library path ", LIBRARYPATH, "not found."
-    print "Please set the correct path to your symbols library in the macro script"
 
