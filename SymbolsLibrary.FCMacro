@@ -48,6 +48,9 @@ This macro adds a browser window to the FreeCAD interface, from
 which you can browse and install items from the library.
 '''
 
+import FreeCAD, FreeCADGui, Part
+from PySide import QtGui, QtCore, QtSvg
+
 param = FreeCAD.ParamGet('User parameter:Plugins/symbols_library')
 s = param.GetString('destination')
 
@@ -57,9 +60,6 @@ else:
     folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("SymbolsLibrary", "Location of your existing Symbols library", None, QtGui.QApplication.UnicodeUTF8))
     param.SetString('destination',folderDialog)
     LIBRARYPATH = param.GetString('destination')
-
-import FreeCAD, FreeCADGui, Part
-from PySide import QtGui, QtCore, QtSvg
 
 class ExpDockWidget(QtGui.QDockWidget):
     "a library explorer dock widget"
@@ -93,6 +93,10 @@ class ExpDockWidget(QtGui.QDockWidget):
         self.preview.setFixedHeight(128)
         self.preview.setFixedWidth(128)
         layout.addWidget(self.preview)
+        self.configbutton = QtGui.QPushButton()
+        self.configbutton.setText("Change path")
+        self.configbutton.clicked.connect(self.changepath)
+        layout.addWidget(self.configbutton)
         layout.setAlignment(self.preview, QtCore.Qt.AlignHCenter)
         self.setWidget(container)
         
@@ -103,6 +107,12 @@ class ExpDockWidget(QtGui.QDockWidget):
             self.preview.show()
             return
         self.preview.hide()
+        
+    def changepath(self):
+        librarypath = FreeCAD.ParamGet('User parameter:Plugins/symbols_library').GetString('destination','')
+        np = QtGui.QFileDialog.getExistingDirectory(self,"Location of your existing Parts library",librarypath)
+        if np:
+            FreeCAD.ParamGet('User parameter:Plugins/symbols_library').SetString('destination',np)
 
     def doubleclicked(self, index):
         path = self.dirmodel.filePath(index)
