@@ -149,5 +149,5 @@ if QtCore.QDir(LIBRARYPATH).exists():
     else:
         m.addDockWidget(QtCore.Qt.RightDockWidgetArea,ExpDockWidget(LIBRARYPATH))
 else:
-    print "Symbols library path ", LIBRARYPATH, "not found."
+    print("Symbols library path ", LIBRARYPATH, "not found.")
 
