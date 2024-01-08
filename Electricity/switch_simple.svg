@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="85mm"
+   height="54mm"
+   id="svg3010"
+   version="1.1"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   sodipodi:docname="switch_simple.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">switch_simple</title>
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9.5999999"
+     inkscape:cx="159.73959"
+     inkscape:cy="43.281251"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g3273_EU"
+     showgrid="false"
+     inkscape:window-width="1550"
+     inkscape:window-height="914"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:lockguides="true"
+     showguides="true">
+    <sodipodi:guide
+       position="138.54167,119.71949"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3014">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:title>switch_simple</dc:title>
+        <dc:description>Simple switch</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3273_EU"
+       transform="matrix(3.543307,0,0,3.543307,-746.35168,-851.98948)"
+       inkscape:label="#g3273">
+      <circle
+         style="fill:none;stroke:#000000;stroke-width:0.34986668;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         cx="263.09811"
+         cy="256.40546"
+         r="1.0999398"
+         id="circle146" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.34986668;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none"
+         d="m 259.02989,252.30501 3.40015,3.40015"
+         id="path142-9"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.349867;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none"
+         d="m 259.02989,252.30501 0.69736,-0.69736"
+         id="path3"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
