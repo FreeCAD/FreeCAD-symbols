@@ -54,10 +54,23 @@ from PySide import QtGui, QtCore, QtSvg
 param = FreeCAD.ParamGet('User parameter:Plugins/symbols_library')
 s = param.GetString('destination')
 
+# Copied from Mod/Tux/NavigationIndicatorGui.py
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+
+    def translate(context, text):
+        "convenience function for Qt 4 translator"
+        return QtGui.QApplication.translate(context, text, None, _encoding)
+except AttributeError:
+    def translate(context, text):
+        "convenience function for Qt 5 translator"
+        return QtGui.QApplication.translate(context, text, None)
+
 if s:
     LIBRARYPATH = s
 else:
-    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("SymbolsLibrary", "Location of your existing Symbols library", None, QtGui.QApplication.UnicodeUTF8))
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,translate("SymbolsLibrary", "Location of your existing Symbols library"))
+
     param.SetString('destination',folderDialog)
     LIBRARYPATH = param.GetString('destination')
 
