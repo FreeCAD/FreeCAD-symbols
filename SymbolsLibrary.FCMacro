@@ -57,7 +57,7 @@ s = param.GetString('destination')
 if s:
     LIBRARYPATH = s
 else:
-    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("SymbolsLibrary", "Location of your existing Symbols library", None, QtGui.QApplication.UnicodeUTF8))
+    folderDialog = QtGui.QFileDialog.getExistingDirectory(None,QtGui.QApplication.translate("SymbolsLibrary", "Location of your existing Symbols library", None, QtGui.QFileDialog.ShowDirsOnly))
     param.SetString('destination',folderDialog)
     LIBRARYPATH = param.GetString('destination')
 
