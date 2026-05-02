@@ -1,6 +1,15 @@
 FreeCAD Symbols Library
 =======================
 
+
+**DEPRECATION NOTICE**: This repo and its contents have been superseded
+by the build-in TechDraw symbols library. It is retains for historical
+reference only.
+
+
+ORIGINAL README
+---------------
+
 This repository contains a library of SVG symbols to be used in FreeCAD.
 Although they consist of simple SVG files, so they can also be imported
 inside the 3D document, they are primarily made for use on Drawing pages.
